@@ -82,6 +82,8 @@ p {
 .nav-item:focus {
   color: var(--acsent-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list .link.current {
   color: var(--acsent-color);
@@ -109,10 +111,14 @@ p {
 .contacts:hover,
 .contacts:focus {
   color: var(--acsent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover .upline-contacts-icon,
 .contacts:focus .upline-contacts-icon {
   fill: var(--acsent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Эффективные решения для вашего бизнеса */
@@ -167,6 +173,8 @@ p {
   letter-spacing: 0.06em;
   color: var(--secondary-acsent-color);
   background: var(--acsent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Особенности */
 .futures {
@@ -241,7 +249,20 @@ p {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-/*Наша команда*/
+.overlay {
+  position: absolute;
+  padding-top: 25;
+  padding-bottom: 25;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-acsent-color);
+  background: rgba(47, 48, 58, 0.8);
+}
+
+/*Наша команда color: #ffffff;*/
 .our-team {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -316,10 +337,14 @@ p {
 .profession-icon-link:hover,
 .profession-icon-link:focus {
   background-color: var(--acsent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .profession-icon-link:hover .profession-social-icon,
 .profession-icon-link:focus .profession-social-icon {
   fill: var(--secondary-acsent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Постоянные клиенты */
 .clients {
@@ -355,10 +380,14 @@ p {
 .regular-clients-icon-link:hover,
 .regular-clients-icon-link:focus {
   border: 1px solid rgba(33, 150, 243, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .regular-clients-icon-link:hover .regular-clients-logo-icon,
 .regular-clients-icon-link:focus .regular-clients-logo-icon {
   fill: rgba(33, 150, 243, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Подвал страницы*/
 .footer-contacts {
@@ -425,6 +454,8 @@ p {
 .contacts-down:focus {
   text-decoration: none;
   color: var(--acsent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-down-social {
   display: flex;
@@ -455,6 +486,8 @@ p {
 .contacts-down-social-icon-link:hover,
 .contacts-down-social-icon-link:focus {
   background-color: rgba(33, 150, 243, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Портфоліо*/
 /*.hidden {
@@ -496,6 +529,8 @@ p {
   background: var(--acsent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filters-page li:not(:first-child) {
   margin-left: 8px;
@@ -524,6 +559,8 @@ p {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projekts {
   padding: 20px 24px;
