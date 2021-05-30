@@ -46,6 +46,7 @@ p {
   display: flex;
   align-items: center;
 }
+
 .logo {
   color: var(--acsent-color);
   font-family: 'Raleway', sans-serif;
@@ -71,19 +72,31 @@ p {
   margin-left: 93px;
 }
 .nav-item {
+  position: relative;
   display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(30px);
+  width: 100%;
+  height: 4px;
+  background: var(--acsent-color);
+  border-radius: 2px;
+}
+
 .nav-item:hover,
 .nav-item:focus {
   color: var(--acsent-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list .link.current {
   color: var(--acsent-color);
@@ -102,23 +115,21 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .upline-contacts-icon {
   margin: 0 auto;
   margin-right: 10px;
   fill: var(--secondary-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover,
 .contacts:focus {
   color: var(--acsent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover .upline-contacts-icon,
 .contacts:focus .upline-contacts-icon {
   fill: var(--acsent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Эффективные решения для вашего бизнеса */
@@ -155,7 +166,6 @@ p {
 /* Шапка */
 .header-main-button {
   display: inline-block;
-  border-radius: 4px;
   padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
@@ -163,18 +173,20 @@ p {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--secondary-acsent-color);
-  background: var(--acsent-color);
+  background-color: var(--acsent-color);
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-main-button:hover {
+.header-main-button:hover,
+.header-main-button:focus {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--secondary-acsent-color);
-  background: var(--acsent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--acsent-color);
 }
 /* Особенности */
 .futures {
@@ -249,10 +261,17 @@ p {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+.working-kind-overlay {
+  position: relative;
+  display: flex;
+}
 .overlay {
   position: absolute;
-  padding-top: 25;
-  padding-bottom: 25;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -324,6 +343,7 @@ p {
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .profession-icon-link {
   display: flex;
@@ -333,18 +353,15 @@ p {
   height: 44px;
   background-color: var(--secondary-acsent-color);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .profession-icon-link:hover,
 .profession-icon-link:focus {
   background-color: var(--acsent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .profession-icon-link:hover .profession-social-icon,
 .profession-icon-link:focus .profession-social-icon {
   fill: var(--secondary-acsent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Постоянные клиенты */
 .clients {
@@ -373,21 +390,22 @@ p {
   border-radius: 4px;
   border: 1px solid rgba(175, 177, 184, 1);
   fill: rgba(175, 177, 184, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .regular-clients-list .item:not(:first-child) {
   margin-left: 30px;
+}
+.regular-clients-logo-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .regular-clients-icon-link:hover,
 .regular-clients-icon-link:focus {
   border: 1px solid rgba(33, 150, 243, 1);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .regular-clients-icon-link:hover .regular-clients-logo-icon,
 .regular-clients-icon-link:focus .regular-clients-logo-icon {
   fill: rgba(33, 150, 243, 1);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Подвал страницы*/
 .footer-contacts {
@@ -448,14 +466,13 @@ p {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-down:hover,
 .contacts-down:focus {
   text-decoration: none;
   color: var(--acsent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-down-social {
   display: flex;
@@ -482,12 +499,11 @@ p {
   fill: var(--secondary-acsent-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-down-social-icon-link:hover,
 .contacts-down-social-icon-link:focus {
   background-color: rgba(33, 150, 243, 1);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Портфоліо*/
 /*.hidden {
@@ -515,6 +531,9 @@ p {
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filters:hover,
 .filters:focus {
@@ -526,11 +545,9 @@ p {
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--secondary-acsent-color);
-  background: var(--acsent-color);
+  background-color: var(--acsent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filters-page li:not(:first-child) {
   margin-left: 8px;
@@ -551,6 +568,31 @@ p {
 .our-work .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+.projekts-overlay-works {
+  position: relative;
+  overflow: hidden;
+}
+.projekts-overlay {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  overflow: auto;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .projekts-link:hover,
 .projekts-link:focus {
   display: block;
@@ -559,8 +601,10 @@ p {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projekts-link:hover .projekts-overlay,
+.projekts-link:focus .projekts-overlay {
+  transform: translateY(0%);
 }
 .projekts {
   padding: 20px 24px;
@@ -581,4 +625,51 @@ p {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
+}
+/*модельне вікно*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--secondary-acsent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  background: var(--secondary-acsent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

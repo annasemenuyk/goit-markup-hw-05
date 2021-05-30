@@ -20,7 +20,8 @@
   <header class="upline">
     <div class="container upline-main">
       <nav class="upline-main-nav">
-        <a class="logo link" href="./index.html">Web<span class="logo-upline">Studio</span></a>
+        <a class="logo link animate__heartBeat animate__animated animate__bounce" href="./index.html">Web<span
+            class="logo-upline">Studio</span></a>
         <ul class="upline-nav-list list">
           <li class="nav-item list">
             <a class="nav-item link current" href="">Студия</a>
@@ -54,7 +55,7 @@
     <section class="section">
       <div class="main-section container">
         <h1 class="header-main">Эффективные решения для вашего бизнеса</h1>
-        <button class="header-main-button" type="button">
+        <button class="header-main-button" type="button" data-modal-open>
           Заказать услугу</button>
       </div>
     </section>
@@ -118,14 +119,23 @@
       <div class="container">
         <h2 class="working-kind">Чем мы занимаемся</h2>
         <ul class="working-kind-list list">
-          <li class="item"><img src="./images/working-kind/box1.jpg" alt="Десктопные приложения" width="370" />
-            <p class="overlay">Десктопные приложения</p>
+          <li class="item">
+            <div class="working-kind-overlay"><img src="./images/working-kind/box1.jpg" alt="Десктопные приложения"
+                width="370" height="294" />
+              <p class="overlay">Десктопные приложения</p>
+            </div>
           </li>
-          <li class="item"><img src="./images/working-kind/box2.jpg" alt="Мобильные приложения" width="370" />
-            <p class="overlay">Мобильные приложения</p>
+          <li class="item">
+            <div class="working-kind-overlay"><img src="./images/working-kind/box2.jpg" alt="Мобильные приложения"
+                width="370" height="294" />
+              <p class="overlay">Мобильные приложения</p>
+            </div>
           </li>
-          <li class="item"><img src="./images/working-kind/box3.jpg" alt="Дизайнерские решения" width="370" />
-            <p class="overlay">Дизайнерские решения</p>
+          <li class="item">
+            <div class="working-kind-overlay"><img src="./images/working-kind/box3.jpg" alt="Дизайнерские решения"
+                width="370" height="294" />
+              <p class="overlay">Дизайнерские решения</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -363,6 +373,12 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal"> <button type="button" class="modal-close-button" data-modal-close><svg class="modal-close"
+          height="18px" width="18px">
+          <use href="./images/icons.svg#close-black"></use>
+        </svg></button></div>
+  </div>
   <script src="./js/modal.js"></script>
 </body>
 
